@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Movie Recommendation & OTT Availability</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <!-- Optional: Import Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Background Layer (optional for effect) -->
+  <div class="background"></div>
+  
+  <!-- Main Content Area with Glass Effect -->
+  <div class="glass">
+    <h1>Movie Recommendation & OTT Availability</h1>
+    <!-- Single Search Bar -->
+    <form id="movieForm">
+      <input type="text" id="movieInput" placeholder="Search for movie">
+      <button type="submit">Search</button>
+    </form>
+    <!-- Error messages will appear here -->
+    <div id="error"></div>
+  </div>
+
+  <!-- Results Section -->
+  <div class="results-section">
+    <div class="results-container">
+      <!-- Combined Results Section -->
+      <div class="results-column animate">
+        <h2>Recommendation</h2>
+        <div id="results">
+          <!-- Movie details and recommended movies will be dynamically inserted here. -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Link to External JS File -->
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
